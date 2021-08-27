@@ -3,6 +3,9 @@ import { StyleSheet, Text, View ,TouchableOpacity,FlatList} from 'react-native';
 import Header from './components/header';
 import TodoItem from './components/todoItem';
 import AddTodos from './components/addTodos';
+import About from './screens/about';
+import Home from './screens/home';
+import HomeStack from './routes/homeStack';
 
 export default function App() {
   const [todo,setTodo]= useState([
@@ -32,13 +35,16 @@ export default function App() {
         <View>
           <Header/>
         </View>
+        
+        <HomeStack/>
         <FlatList data={todo}
         renderItem={({ item }) => (
           <TodoItem item={item}  handleClick={handleClick} />
         )}
-
+        
         />
         <AddTodos handleSubmit={handleSubmit}/>
+
        </View>
   );
 }
