@@ -10,9 +10,7 @@ export default function TodoItem({item,handleClick})
     
         <TouchableOpacity style={styles.container} >
             <Text style={styles.tcontent} >{item.text}</Text>
-            <TouchableOpacity>
             <AntDesign name="delete" size={24} color="black" onPress={() => handleClick(item.key)}/>
-            </TouchableOpacity>
             
         </TouchableOpacity>  
     
